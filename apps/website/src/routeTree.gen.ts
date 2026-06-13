@@ -8,144 +8,150 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as AboutRouteImport } from "./routes/about";
-import { Route as IndexRouteImport } from "./routes/index";
-import { Route as DemoTanstackQueryRouteImport } from "./routes/demo/tanstack-query";
-import { Route as DemoPosthogRouteImport } from "./routes/demo/posthog";
-import { Route as DemoConvexRouteImport } from "./routes/demo/convex";
-import { Route as DemoClerkRouteImport } from "./routes/demo/clerk";
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
+import { Route as DemoPosthogRouteImport } from './routes/demo/posthog'
+import { Route as DemoConvexRouteImport } from './routes/demo/convex'
+import { Route as DemoClerkRouteImport } from './routes/demo/clerk'
 
 const AboutRoute = AboutRouteImport.update({
-  id: "/about",
-  path: "/about",
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
-  id: "/demo/tanstack-query",
-  path: "/demo/tanstack-query",
+  id: '/demo/tanstack-query',
+  path: '/demo/tanstack-query',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const DemoPosthogRoute = DemoPosthogRouteImport.update({
-  id: "/demo/posthog",
-  path: "/demo/posthog",
+  id: '/demo/posthog',
+  path: '/demo/posthog',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const DemoConvexRoute = DemoConvexRouteImport.update({
-  id: "/demo/convex",
-  path: "/demo/convex",
+  id: '/demo/convex',
+  path: '/demo/convex',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const DemoClerkRoute = DemoClerkRouteImport.update({
-  id: "/demo/clerk",
-  path: "/demo/clerk",
+  id: '/demo/clerk',
+  path: '/demo/clerk',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute;
-  "/about": typeof AboutRoute;
-  "/demo/clerk": typeof DemoClerkRoute;
-  "/demo/convex": typeof DemoConvexRoute;
-  "/demo/posthog": typeof DemoPosthogRoute;
-  "/demo/tanstack-query": typeof DemoTanstackQueryRoute;
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/demo/clerk': typeof DemoClerkRoute
+  '/demo/convex': typeof DemoConvexRoute
+  '/demo/posthog': typeof DemoPosthogRoute
+  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute;
-  "/about": typeof AboutRoute;
-  "/demo/clerk": typeof DemoClerkRoute;
-  "/demo/convex": typeof DemoConvexRoute;
-  "/demo/posthog": typeof DemoPosthogRoute;
-  "/demo/tanstack-query": typeof DemoTanstackQueryRoute;
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/demo/clerk': typeof DemoClerkRoute
+  '/demo/convex': typeof DemoConvexRoute
+  '/demo/posthog': typeof DemoPosthogRoute
+  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  "/": typeof IndexRoute;
-  "/about": typeof AboutRoute;
-  "/demo/clerk": typeof DemoClerkRoute;
-  "/demo/convex": typeof DemoConvexRoute;
-  "/demo/posthog": typeof DemoPosthogRoute;
-  "/demo/tanstack-query": typeof DemoTanstackQueryRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/demo/clerk': typeof DemoClerkRoute
+  '/demo/convex': typeof DemoConvexRoute
+  '/demo/posthog': typeof DemoPosthogRoute
+  '/demo/tanstack-query': typeof DemoTanstackQueryRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
+  fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | "/"
-    | "/about"
-    | "/demo/clerk"
-    | "/demo/convex"
-    | "/demo/posthog"
-    | "/demo/tanstack-query";
-  fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/about" | "/demo/clerk" | "/demo/convex" | "/demo/posthog" | "/demo/tanstack-query";
+    | '/'
+    | '/about'
+    | '/demo/clerk'
+    | '/demo/convex'
+    | '/demo/posthog'
+    | '/demo/tanstack-query'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/about'
+    | '/demo/clerk'
+    | '/demo/convex'
+    | '/demo/posthog'
+    | '/demo/tanstack-query'
   id:
-    | "__root__"
-    | "/"
-    | "/about"
-    | "/demo/clerk"
-    | "/demo/convex"
-    | "/demo/posthog"
-    | "/demo/tanstack-query";
-  fileRoutesById: FileRoutesById;
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/demo/clerk'
+    | '/demo/convex'
+    | '/demo/posthog'
+    | '/demo/tanstack-query'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  AboutRoute: typeof AboutRoute;
-  DemoClerkRoute: typeof DemoClerkRoute;
-  DemoConvexRoute: typeof DemoConvexRoute;
-  DemoPosthogRoute: typeof DemoPosthogRoute;
-  DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute;
+  IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  DemoClerkRoute: typeof DemoClerkRoute
+  DemoConvexRoute: typeof DemoConvexRoute
+  DemoPosthogRoute: typeof DemoPosthogRoute
+  DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/about": {
-      id: "/about";
-      path: "/about";
-      fullPath: "/about";
-      preLoaderRoute: typeof AboutRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/demo/tanstack-query": {
-      id: "/demo/tanstack-query";
-      path: "/demo/tanstack-query";
-      fullPath: "/demo/tanstack-query";
-      preLoaderRoute: typeof DemoTanstackQueryRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/demo/posthog": {
-      id: "/demo/posthog";
-      path: "/demo/posthog";
-      fullPath: "/demo/posthog";
-      preLoaderRoute: typeof DemoPosthogRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/demo/convex": {
-      id: "/demo/convex";
-      path: "/demo/convex";
-      fullPath: "/demo/convex";
-      preLoaderRoute: typeof DemoConvexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/demo/clerk": {
-      id: "/demo/clerk";
-      path: "/demo/clerk";
-      fullPath: "/demo/clerk";
-      preLoaderRoute: typeof DemoClerkRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/tanstack-query': {
+      id: '/demo/tanstack-query'
+      path: '/demo/tanstack-query'
+      fullPath: '/demo/tanstack-query'
+      preLoaderRoute: typeof DemoTanstackQueryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/posthog': {
+      id: '/demo/posthog'
+      path: '/demo/posthog'
+      fullPath: '/demo/posthog'
+      preLoaderRoute: typeof DemoPosthogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/convex': {
+      id: '/demo/convex'
+      path: '/demo/convex'
+      fullPath: '/demo/convex'
+      preLoaderRoute: typeof DemoConvexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/clerk': {
+      id: '/demo/clerk'
+      path: '/demo/clerk'
+      fullPath: '/demo/clerk'
+      preLoaderRoute: typeof DemoClerkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -156,16 +162,16 @@ const rootRouteChildren: RootRouteChildren = {
   DemoConvexRoute: DemoConvexRoute,
   DemoPosthogRoute: DemoPosthogRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
 
-import type { getRouter } from "./router.tsx";
-import type { createStart } from "@tanstack/react-start";
-declare module "@tanstack/react-start" {
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
   interface Register {
-    ssr: true;
-    router: Awaited<ReturnType<typeof getRouter>>;
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
   }
 }
