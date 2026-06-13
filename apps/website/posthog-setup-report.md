@@ -9,16 +9,16 @@ The wizard has completed a deep integration of PostHog into your TanStack Start 
 - **`src/components/Header.tsx`** — Captures `external_link_clicked` with label and destination for the Docs, GitHub, and X links in the header.
 - **`.env`** — Set `VITE_POSTHOG_KEY` and `VITE_POSTHOG_HOST` to your EU project credentials.
 
-| Event | Description | File |
-|---|---|---|
-| `todo_added` | User adds a new todo item in the Convex demo | `src/routes/demo/convex.tsx` |
-| `todo_completed` | User marks a todo item as completed | `src/routes/demo/convex.tsx` |
-| `todo_reopened` | User unchecks a completed todo item | `src/routes/demo/convex.tsx` |
-| `todo_deleted` | User removes a todo item | `src/routes/demo/convex.tsx` |
-| `theme_changed` | User switches the app theme (light / dark / auto) | `src/components/ThemeToggle.tsx` |
-| `cta_clicked` | User clicks a hero CTA on the home page | `src/routes/index.tsx` |
-| `external_link_clicked` | User clicks an external link in the header | `src/components/Header.tsx` |
-| `user_signed_out` | User signs out via Clerk; PostHog is reset after capture | `src/integrations/posthog/provider.tsx` |
+| Event                   | Description                                              | File                                    |
+| ----------------------- | -------------------------------------------------------- | --------------------------------------- |
+| `todo_added`            | User adds a new todo item in the Convex demo             | `src/routes/demo/convex.tsx`            |
+| `todo_completed`        | User marks a todo item as completed                      | `src/routes/demo/convex.tsx`            |
+| `todo_reopened`         | User unchecks a completed todo item                      | `src/routes/demo/convex.tsx`            |
+| `todo_deleted`          | User removes a todo item                                 | `src/routes/demo/convex.tsx`            |
+| `theme_changed`         | User switches the app theme (light / dark / auto)        | `src/components/ThemeToggle.tsx`        |
+| `cta_clicked`           | User clicks a hero CTA on the home page                  | `src/routes/index.tsx`                  |
+| `external_link_clicked` | User clicks an external link in the header               | `src/components/Header.tsx`             |
+| `user_signed_out`       | User signs out via Clerk; PostHog is reset after capture | `src/integrations/posthog/provider.tsx` |
 
 ## Next steps
 

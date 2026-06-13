@@ -1,10 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { usePostHog } from '@posthog/react'
+import { createFileRoute } from "@tanstack/react-router";
+import { usePostHog } from "@posthog/react";
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute("/")({ component: App });
 
 function App() {
-  const posthog = usePostHog()
+  const posthog = usePostHog();
   return (
     <main className="page-wrap px-4 pb-8 pt-14">
       <section className="island-shell rise-in relative overflow-hidden rounded-[2rem] px-6 py-10 sm:px-10 sm:py-14">
@@ -15,13 +15,15 @@ function App() {
           Start simple, ship quickly.
         </h1>
         <p className="mb-8 max-w-2xl text-base text-[var(--sea-ink-soft)] sm:text-lg">
-          This base starter intentionally keeps things light: two routes, clean
-          structure, and the essentials you need to build from scratch.
+          This base starter intentionally keeps things light: two routes, clean structure, and the
+          essentials you need to build from scratch.
         </p>
         <div className="flex flex-wrap gap-3">
           <a
             href="/about"
-            onClick={() => posthog.capture('cta_clicked', { label: 'About This Starter', destination: '/about' })}
+            onClick={() =>
+              posthog.capture("cta_clicked", { label: "About This Starter", destination: "/about" })
+            }
             className="rounded-full border border-[rgba(50,143,151,0.3)] bg-[rgba(79,184,178,0.14)] px-5 py-2.5 text-sm font-semibold text-[var(--lagoon-deep)] no-underline transition hover:-translate-y-0.5 hover:bg-[rgba(79,184,178,0.24)]"
           >
             About This Starter
@@ -30,7 +32,12 @@ function App() {
             href="https://tanstack.com/router"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => posthog.capture('cta_clicked', { label: 'Router Guide', destination: 'https://tanstack.com/router' })}
+            onClick={() =>
+              posthog.capture("cta_clicked", {
+                label: "Router Guide",
+                destination: "https://tanstack.com/router",
+              })
+            }
             className="rounded-full border border-[rgba(23,58,64,0.2)] bg-white/50 px-5 py-2.5 text-sm font-semibold text-[var(--sea-ink)] no-underline transition hover:-translate-y-0.5 hover:border-[rgba(23,58,64,0.35)]"
           >
             Router Guide
@@ -40,31 +47,17 @@ function App() {
 
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          [
-            'Type-Safe Routing',
-            'Routes and links stay in sync across every page.',
-          ],
-          [
-            'Server Functions',
-            'Call server code from your UI without creating API boilerplate.',
-          ],
-          [
-            'Streaming by Default',
-            'Ship progressively rendered responses for faster experiences.',
-          ],
-          [
-            'Tailwind Native',
-            'Design quickly with utility-first styling and reusable tokens.',
-          ],
+          ["Type-Safe Routing", "Routes and links stay in sync across every page."],
+          ["Server Functions", "Call server code from your UI without creating API boilerplate."],
+          ["Streaming by Default", "Ship progressively rendered responses for faster experiences."],
+          ["Tailwind Native", "Design quickly with utility-first styling and reusable tokens."],
         ].map(([title, desc], index) => (
           <article
             key={title}
             className="island-shell feature-card rise-in rounded-2xl p-5"
             style={{ animationDelay: `${index * 90 + 80}ms` }}
           >
-            <h2 className="mb-2 text-base font-semibold text-[var(--sea-ink)]">
-              {title}
-            </h2>
+            <h2 className="mb-2 text-base font-semibold text-[var(--sea-ink)]">{title}</h2>
             <p className="m-0 text-sm text-[var(--sea-ink-soft)]">{desc}</p>
           </article>
         ))}
@@ -77,15 +70,15 @@ function App() {
             Edit <code>src/routes/index.tsx</code> to customize the home page.
           </li>
           <li>
-            Update <code>src/components/Header.tsx</code> and{' '}
-            <code>src/components/Footer.tsx</code> for brand links.
+            Update <code>src/components/Header.tsx</code> and <code>src/components/Footer.tsx</code>{" "}
+            for brand links.
           </li>
           <li>
-            Add routes in <code>src/routes</code> and tweak visual tokens in{' '}
+            Add routes in <code>src/routes</code> and tweak visual tokens in{" "}
             <code>src/styles.css</code>.
           </li>
         </ul>
       </section>
     </main>
-  )
+  );
 }

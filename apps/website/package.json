@@ -6,10 +6,9 @@
     "#/*": "./src/*"
   },
   "scripts": {
-    "dev": "vite dev --port 3000",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run"
+    "dev": "vp dev",
+    "build": "tsc && vp build",
+    "preview": "vp preview"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.61.3",
