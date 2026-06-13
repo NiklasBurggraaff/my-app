@@ -21,3 +21,7 @@ peerDependencyRules:
   allowedVersions:
     vite: "*"
     vitest: "*"
+allowBuilds:
+  '@clerk/shared': true
+  core-js: true
+  esbuild: true
