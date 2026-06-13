@@ -7,8 +7,10 @@
     "ready": "vp check && vp run -r test && vp run -r build",
     "dev": "vp run website#dev"
   },
+  "dependencies": {
+    "vite": "8.0.0"
+  },
   "devDependencies": {
-    "vite": "8.0.0",
     "vite-plus": "catalog:"
   },
   "engines": {
