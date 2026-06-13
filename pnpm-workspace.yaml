@@ -22,7 +22,6 @@ peerDependencyRules:
     vite: "*"
     vitest: "*"
 allowBuilds:
-  '@clerk/shared': true
+  "@clerk/shared": true
   core-js: true
   esbuild: true
-  inotify: true
