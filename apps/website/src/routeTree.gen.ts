@@ -9,16 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AboutRouteImport } from './routes/about'
+import { Route as FoodRouteImport } from './routes/food'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
 import { Route as DemoPosthogRouteImport } from './routes/demo/posthog'
 import { Route as DemoConvexRouteImport } from './routes/demo/convex'
 import { Route as DemoClerkRouteImport } from './routes/demo/clerk'
 
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const FoodRoute = FoodRouteImport.update({
+  id: '/food',
+  path: '/food',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,7 +49,7 @@ const DemoClerkRoute = DemoClerkRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/food': typeof FoodRoute
   '/demo/clerk': typeof DemoClerkRoute
   '/demo/convex': typeof DemoConvexRoute
   '/demo/posthog': typeof DemoPosthogRoute
@@ -57,7 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/food': typeof FoodRoute
   '/demo/clerk': typeof DemoClerkRoute
   '/demo/convex': typeof DemoConvexRoute
   '/demo/posthog': typeof DemoPosthogRoute
@@ -66,7 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/food': typeof FoodRoute
   '/demo/clerk': typeof DemoClerkRoute
   '/demo/convex': typeof DemoConvexRoute
   '/demo/posthog': typeof DemoPosthogRoute
@@ -76,7 +76,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
+    | '/food'
     | '/demo/clerk'
     | '/demo/convex'
     | '/demo/posthog'
@@ -84,7 +84,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
+    | '/food'
     | '/demo/clerk'
     | '/demo/convex'
     | '/demo/posthog'
@@ -92,7 +92,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
+    | '/food'
     | '/demo/clerk'
     | '/demo/convex'
     | '/demo/posthog'
@@ -101,7 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
+  FoodRoute: typeof FoodRoute
   DemoClerkRoute: typeof DemoClerkRoute
   DemoConvexRoute: typeof DemoConvexRoute
   DemoPosthogRoute: typeof DemoPosthogRoute
@@ -110,11 +110,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/food': {
+      id: '/food'
+      path: '/food'
+      fullPath: '/food'
+      preLoaderRoute: typeof FoodRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -157,7 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  FoodRoute: FoodRoute,
   DemoClerkRoute: DemoClerkRoute,
   DemoConvexRoute: DemoConvexRoute,
   DemoPosthogRoute: DemoPosthogRoute,
